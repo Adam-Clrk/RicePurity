@@ -1,0 +1,96 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+* {
+    box-sizing: inherit;
+    font-family: inherit;
+}
+
+body {
+    background-color: #FBEEC8;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+ol, ul {
+    padding: 0;
+    margin: 1em 0;
+}
+li {
+    font-size: 1.3em;
+    margin-bottom: 0.2em;
+    list-style: none;
+}
+
+li, li label, li input {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+li label {
+    padding: 0.5em;
+    width: 100%;
+    display: block;
+    background-color: #cbcebd;
+    border-radius: 3px;
+    display: flex;
+}
+li input {
+	-webkit-appearance: none;
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+    height: 1.6em;
+    width: 1.6em;
+    flex: 0 0 1.6em;
+    margin: 0 0.4em;
+	border-radius: 3px;
+	display: inline-block;
+    position: relative;
+    text-align: center;
+}
+li input:active, li input:checked:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1); 
+}
+li input:checked {
+    background-color: #656769;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+    color: #99a1a7;   
+}
+li input:checked::after {
+    position: absolute;
+    content: '';
+    left: 7px;
+    top: 1px;
+    width: 5px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    border-radius: 0px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.label {
+    margin-left: 0.1em;
+}
+.child {
+    background-color: #e1e3da;
+}
+
+button {
+    padding: 1em 0.7em;
+    border-radius: 5px;
+    border: 1px solid;
+}
+#qr {
+    width: 50vw;
+    max-width: 50vh;
+    image-rendering: pixelated;
+    image-rendering: optimizespeed;
+}
