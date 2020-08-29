@@ -51,7 +51,7 @@ $.getJSON('sins.json', function (sinData) {
       }
 
       var sinList = $('input[type="checkbox"]:not(.ignore):checked')
-      $('#score').text(100 - sinList.length)
+      $('#score').text(100-((sinList.length/sinData.length)*(100)))
       $('#questions').hide()
       $('#results').show()
     })
